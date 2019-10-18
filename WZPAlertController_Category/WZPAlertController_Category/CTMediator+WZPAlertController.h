@@ -21,13 +21,13 @@
 /**
  设置一些颜色
 
- @param params @{@"titleFontColor":<#标题字体颜色#>,
- @"titleBgColor":<#标题背景颜色#>,
- @"contentFontColor":<#内容字体颜色#>,
- @"cancelBtnFontColor":<#取消按钮字体颜色#>,
- @"cancelBtnBgColor":<#取消按钮背景颜色#>,
- @"confirmBtnFontColor":<#确认按钮字体颜色#>,
- @"confirmBtnBgColor":<#确认按钮背景颜色#>,}
+ @param params @{@@"titleFontColor":<#标题字体颜色#>,
+ @@"titleBgColor":<#标题背景颜色#>,
+ @@"contentFontColor":<#内容字体颜色#>,
+ @@"cancelBtnFontColor":<#取消按钮字体颜色#>,
+ @@"cancelBtnBgColor":<#取消按钮背景颜色#>,
+ @@"confirmBtnFontColor":<#确认按钮字体颜色#>,
+ @@"confirmBtnBgColor":<#确认按钮背景颜色#>,}
  */
 - (void)WZPAlertController_setAlertColors:(NSDictionary *)params;
 /** 设置背景点击alert不消失 */
