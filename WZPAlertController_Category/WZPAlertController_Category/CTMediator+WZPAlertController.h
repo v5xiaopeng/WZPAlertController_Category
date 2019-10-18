@@ -35,7 +35,7 @@
 /** 只要确认按钮 */
 - (void)WZPAlertController_setHaveNotCancelBtn;
 /** 内容 */
-- (void)WZPAlertController_setContentString:(NSDictionary *)params;
+- (void)WZPAlertController_setContentString:(NSString *)string;
 /** 取消按钮事件 */
 - (void)WZPAlertController_setCancelBlock:(void(^)(void))block;
 /** 确认按钮事件 */

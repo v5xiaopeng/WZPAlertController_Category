@@ -28,7 +28,8 @@
 - (void)WZPAlertController_setHaveNotCancelBtn{
     [self performTarget:@"WZPAlertController" action:@"setHaveNotCancelBtn" params:nil shouldCacheTarget:NO];
 }
-- (void)WZPAlertController_setContentString:(NSDictionary *)params{
+- (void)WZPAlertController_setContentString:(NSString *)string{
+    NSDictionary *params = @{@"contentStr":string};
     [self performTarget:@"WZPAlertController" action:@"setContentString" params:params shouldCacheTarget:NO];
 }
 - (void)WZPAlertController_setCancelBlock:(void(^)(void))block{
