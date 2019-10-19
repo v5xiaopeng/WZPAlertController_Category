@@ -28,8 +28,12 @@
 - (void)WZPAlertController_setHaveNotCancelBtn{
     [self performTarget:@"WZPAlertController" action:@"setHaveNotCancelBtn" params:nil shouldCacheTarget:NO];
 }
-- (void)WZPAlertController_setContentString:(NSString *)string{
-    NSDictionary *params = @{@"contentStr":string};
+- (void)WZPAlertController_setContentString:(NSString *)content andTitle:(NSString *)title cancelTitle:(NSString *)cancel confirmTitle:(NSString *)confirm{
+    NSDictionary *params = @{@"contentStr":content != nil ? content : @"",
+                             @"titleStr":title != nil ? title : @"",
+                             @"cancelTitleStr":cancel != nil ? cancel : @"",
+                             @"confirmTitleStr":confirm != nil ? confirm : @""
+                             };
     [self performTarget:@"WZPAlertController" action:@"setContentString" params:params shouldCacheTarget:NO];
 }
 - (void)WZPAlertController_setCancelBlock:(void(^)(void))block{
