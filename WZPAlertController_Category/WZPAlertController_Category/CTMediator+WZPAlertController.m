@@ -10,37 +10,74 @@
 
 @implementation CTMediator (WZPAlertController)
 
+
 - (UIViewController *)WZPAlertController_initWebAlertController{
-    return [self performTarget:@"WZPAlertController" action:@"initWebAlertController" params:nil shouldCacheTarget:NO];
+    return [self performTarget:@"WZPAlertController"
+                        action:@"initWebAlertController"
+                        params:nil
+             shouldCacheTarget:NO];
 }
+
 - (UIViewController *)WZPAlertController_initTextAlertController{
-    return [self performTarget:@"WZPAlertController" action:@"initTextAlertController" params:nil shouldCacheTarget:NO];
+    return [self performTarget:@"WZPAlertController"
+                        action:@"initTextAlertController"
+                        params:nil
+             shouldCacheTarget:NO];
 }
+
 - (UIViewController *)WZPAlertController_initImageAlertController{
-    return [self performTarget:@"WZPAlertController" action:@"initImageAlertController" params:nil shouldCacheTarget:NO];
+    return [self performTarget:@"WZPAlertController"
+                        action:@"initImageAlertController"
+                        params:nil
+             shouldCacheTarget:NO];
 }
 - (void)WZPAlertController_setAlertColors:(NSDictionary *)params{
-    [self performTarget:@"WZPAlertController" action:@"setAlertColors" params:params shouldCacheTarget:NO];
+    [self performTarget:@"WZPAlertController"
+                 action:@"setAlertColors"
+                 params:params
+      shouldCacheTarget:NO];
 }
+
 - (void)WZPAlertController_setTapBgDontCancel{
-    [self performTarget:@"WZPAlertController" action:@"setTapBgDontCancel" params:nil shouldCacheTarget:NO];
+    [self performTarget:@"WZPAlertController"
+                 action:@"setTapBgDontCancel"
+                 params:nil
+      shouldCacheTarget:NO];
 }
+
 - (void)WZPAlertController_setHaveNotCancelBtn{
-    [self performTarget:@"WZPAlertController" action:@"setHaveNotCancelBtn" params:nil shouldCacheTarget:NO];
+    [self performTarget:@"WZPAlertController"
+                 action:@"setHaveNotCancelBtn"
+                 params:nil
+      shouldCacheTarget:NO];
 }
+
 - (void)WZPAlertController_setContentString:(NSString *)content andTitle:(NSString *)title cancelTitle:(NSString *)cancel confirmTitle:(NSString *)confirm{
     NSDictionary *params = @{@"contentStr":content != nil ? content : @"",
                              @"titleStr":title != nil ? title : @"",
                              @"cancelTitleStr":cancel != nil ? cancel : @"",
                              @"confirmTitleStr":confirm != nil ? confirm : @""
                              };
-    [self performTarget:@"WZPAlertController" action:@"setContentString" params:params shouldCacheTarget:NO];
+    [self performTarget:@"WZPAlertController"
+                 action:@"setContentString"
+                 params:params
+      shouldCacheTarget:NO];
 }
+
+
+
 - (void)WZPAlertController_setCancelBlock:(void(^)(void))block{
-    [self performTarget:@"WZPAlertController" action:@"setAlertCancelBlock" params:@{@"block":block} shouldCacheTarget:NO];
+    [self performTarget:@"WZPAlertController"
+                 action:@"setAlertCancelBlock"
+                 params:@{@"block":block}
+      shouldCacheTarget:NO];
 }
+
 - (void)WZPAlertController_setConfirmBlock:(void(^)(void))block{
-    [self performTarget:@"WZPAlertController" action:@"setAlertConfirmBlock" params:@{@"block":block} shouldCacheTarget:NO];
+    [self performTarget:@"WZPAlertController"
+                 action:@"setAlertConfirmBlock"
+                 params:@{@"block":block}
+      shouldCacheTarget:NO];
 }
 
 @end

@@ -13,8 +13,10 @@
 
 /** 创建webView类型alert */
 - (UIViewController *)WZPAlertController_initWebAlertController;
+
 /** 创建text类型alert */
 - (UIViewController *)WZPAlertController_initTextAlertController;
+
 /** 创建image类型alert */
 - (UIViewController *)WZPAlertController_initImageAlertController;
 
@@ -30,14 +32,19 @@
  @@"confirmBtnBgColor":<#确认按钮背景颜色#>,}
  */
 - (void)WZPAlertController_setAlertColors:(NSDictionary *)params;
+
 /** 设置背景点击alert不消失 */
 - (void)WZPAlertController_setTapBgDontCancel;
+
 /** 只要确认按钮 */
 - (void)WZPAlertController_setHaveNotCancelBtn;
+
 /** 内容 标题 取消/确认 */
 - (void)WZPAlertController_setContentString:(NSString *)content andTitle:(NSString *)title cancelTitle:(NSString *)cancel confirmTitle:(NSString *)confirm;
+
 /** 取消按钮事件 */
 - (void)WZPAlertController_setCancelBlock:(void(^)(void))block;
+
 /** 确认按钮事件 */
 - (void)WZPAlertController_setConfirmBlock:(void(^)(void))block;
 
