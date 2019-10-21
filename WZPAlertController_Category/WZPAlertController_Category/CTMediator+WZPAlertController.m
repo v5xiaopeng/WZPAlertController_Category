@@ -59,24 +59,22 @@
                              @"confirmTitleStr":confirm != nil ? confirm : @""
                              };
     [self performTarget:@"WZPAlertController"
-                 action:@"setContentString"
+                 action:@"setContentStringAndSomeTitle"
                  params:params
       shouldCacheTarget:NO];
 }
 
-
-
 - (void)WZPAlertController_setCancelBlock:(void(^)(void))block{
     [self performTarget:@"WZPAlertController"
                  action:@"setAlertCancelBlock"
-                 params:@{@"block":block}
+                 params:@{@"cancelBlock":block}
       shouldCacheTarget:NO];
 }
 
 - (void)WZPAlertController_setConfirmBlock:(void(^)(void))block{
     [self performTarget:@"WZPAlertController"
                  action:@"setAlertConfirmBlock"
-                 params:@{@"block":block}
+                 params:@{@"confirmBlock":block}
       shouldCacheTarget:NO];
 }
 
